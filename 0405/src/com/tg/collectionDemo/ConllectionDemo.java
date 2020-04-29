@@ -1,9 +1,5 @@
 package com.tg.collectionDemo;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-
 /**
  * @Description: ConllectionDemo
  * @Author: tanggang@xiangzhitech.com
@@ -12,7 +8,8 @@ import java.util.Collection;
  */
 public class ConllectionDemo {
     public static void main(String[] args) {
-        Collection<String> collection = new ArrayList<>();
+
+        /*Collection<String> collection = new ArrayList<>();
 
         collection.add("张三");
         collection.add("李四");
@@ -39,6 +36,6 @@ public class ConllectionDemo {
         System.out.println(Arrays.toString(objects));
 
         collection.clear();
-        System.out.println(collection);
+        System.out.println(collection);*/
     }
 }
