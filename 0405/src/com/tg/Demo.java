@@ -1,6 +1,4 @@
 package com.tg;
-import java.util.Random;
-
 /**
  * @Description: Demo
  * @Author: tanggang@xiangzhitech.com
@@ -9,11 +7,25 @@ import java.util.Random;
  */
 public class Demo {
     public static void main(String[] args) {
-        String verificationCode = String.valueOf(new Random().nextInt(899999) + 100000);
-        System.out.println(verificationCode);
+        System.out.println(finallyDemo());
+        /*int[] arr = {12,23,34,45};
+        System.out.println(arr[-1]);*/
+//        String verificationCode = String.valueOf(new Random().nextInt(899999) + 100000);
+//        System.out.println(verificationCode);
 //        System.out.println(new Date().getTime());
 //        String pageSize = null;
 //        System.out.println(isBlank(pageSize)?10:null2Int(pageSize));
+    }
+    public static int finallyDemo() {
+        int a = 10;
+        try {
+            return a;
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            a = 100;
+        }
+        return a;
     }
     public static int null2Int(Object s){
         int v = 0;
