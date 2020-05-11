@@ -10,8 +10,22 @@ public class Demo {
     public static void main(String[] args) throws InterruptedException {
 //        show01();
 //        show02();
-        show03();
-        System.out.println(Thread.currentThread());
+//        show03();
+//        System.out.println(Thread.currentThread());
+        show04();
+//        show05();
+    }
+    public static void show05() {
+        Runnable runnable = new LockDemo();
+        Thread thread = new Thread(runnable);
+
+        thread.start();
+    }
+    private static void show04() {
+        Runnable runnable = new RunnableImpl();
+        Thread thread = new Thread(runnable);
+
+        thread.start();
     }
 
     private static void show03() throws InterruptedException {
