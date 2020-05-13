@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.Objects;
 
 /**
- * @Description: Demo
+ * @Description: OutputStreamDemo
  * @Author: tanggang@xiangzhitech.com
  * @Date: 2020/4/18
  * @Version: 1.0

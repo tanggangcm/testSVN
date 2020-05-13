@@ -1,7 +1,7 @@
 package com.tg.threadDemo;
 
 /**
- * @Description: Demo
+ * @Description: OutputStreamDemo
  * @Author: tanggang@xiangzhitech.com
  * @Date: 2020/5/5
  * @Version: 1.0

@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /**
- * @Description: Demo
+ * @Description: OutputStreamDemo
  * @Author: tanggang@xiangzhitech.com
  * @Date: 2020/5/10
  * @Version: 1.0

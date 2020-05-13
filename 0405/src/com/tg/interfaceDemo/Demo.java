@@ -1,7 +1,7 @@
 package com.tg.interfaceDemo;
 
 /**
- * @Description: Demo
+ * @Description: OutputStreamDemo
  * @Author: tanggang@xiangzhitech.com
  * @Date: 2020/4/10
  * @Version: 1.0

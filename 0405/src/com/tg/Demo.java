@@ -1,6 +1,6 @@
 package com.tg;
 /**
- * @Description: Demo
+ * @Description: OutputStreamDemo
  * @Author: tanggang@xiangzhitech.com
  * @Date: 2020/4/17
  * @Version: 1.0
