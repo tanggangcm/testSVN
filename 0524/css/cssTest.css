@@ -1,0 +1,7 @@
+.div2 {
+    width: 200px;
+    height: 200px;
+    pading: 50px;
+    /*设置盒子属性，让width和height就是盒子的最终大小*/
+    box-sizing: border-box;
+}
