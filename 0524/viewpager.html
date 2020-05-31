@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+</head>
+<body>
+    <img id="banner" width="100%" src="image/banner_1.jpg" />
+    <a href="#" >点击事件</a>
+<script>
+    var banner = document.getElementById("banner");
+    var number = 1;
+    window.setInterval(function() {
+        number++;
+        if(number > 3) {
+            number = 1;
+        }
+        banner.src = "image/banner_" + number + ".jpg";
+    }, 3000);
+</script>
+</body>
+</html>

@@ -34,7 +34,7 @@
         }
         .rg_center {
             float: left;
-            width: 450px;
+            width: 540px;
             margin-top: 50px;
         }
         .rg_right {
@@ -78,7 +78,47 @@
             border: 1px solid #FFD026;
             margin-top: 20px;
         }
+        .error {
+            color: red;
+        }
+        #td_sub {
+            position: absolute;
+            left: 42%;
+        }
     </style>
+    <script>
+        window.onload = function () {
+            document.getElementById("form").onsubmit = function () {
+                return checkUsername() && checkPassword();
+            }
+            document.getElementById("username").onblur = checkUsername;
+            document.getElementById("password").onblur = checkPassword;
+        }
+        function checkUsername() {
+            var username = document.getElementById("username").value;
+            var reg_username = /^\w{6,12}$/;
+            var flag = reg_username.test(username);
+            var s_username = document.getElementById("s_username");
+            if(flag) {
+                s_username.innerHTML = "<img src='image/gou.png' width='35px' height='25px' />";
+            } else {
+                s_username.innerHTML = "用户名格式有误";
+            }
+            return flag;
+        }
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            var reg_password = /^\w{6,12}$/;
+            var flag = reg_password.test(password);
+            var s_password = document.getElementById("s_password");
+            if(flag) {
+                s_password.innerHTML = "<img src='image/gou.png' width='35px' height='25px' />";
+            } else {
+                s_password.innerHTML = "密码格式有误";
+            }
+            return flag;
+        }
+    </script>
 </head>
 <body>
     <div class="rg_layout">
@@ -88,15 +128,21 @@
         </div>
         <div class="rg_center">
             <div class="rg_form">
-                <form action="#" method="post">
+                <form action="#" method="get" id="form">
                     <table>
                         <tr>
                             <td class="td_left"><label for="username">用户名</label></td>
-                            <td class="td_right"><input type="text" name="username" id="username" placeholder="请输入用户名" /></td>
+                            <td class="td_right">
+                                <input type="text" name="username" id="username" placeholder="请输入用户名" />
+                                <span id="s_username" class="error"></span>
+                            </td>
                         </tr>
                         <tr>
                             <td class="td_left"><label for="password">密码</label></td>
-                            <td class="td_right"><input type="password" name="password" id="password" placeholder="请输入密码" /></td>
+                            <td class="td_right">
+                                <input type="password" name="password" id="password" placeholder="请输入密码" />
+                                <span id="s_password" class="error"></span>
+                            </td>
                         </tr>
                         <tr>
                             <td class="td_left"><label for="email">Email</label></td>
@@ -113,7 +159,7 @@
                         <tr>
                             <td class="td_left"><label for="gender">性别</label></td>
                             <td class="td_right">
-                                <input type="radio" name="gender" id="gender" value="male" /> 男
+                                <input type="radio" name="gender" id="gender" value="male" checked /> 男
                                 <input type="radio" name="gender" value="female" /> 女
                             </td>
                         </tr>
@@ -129,7 +175,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2" align="center"><input id="btn_sub" type="submit" value="注册" /></td>
+                            <td colspan="2" align="center" id="td_sub">
+                                <input id="btn_sub" type="submit" value="注册" />
+                            </td>
                         </tr>
                     </table>
                 </form>

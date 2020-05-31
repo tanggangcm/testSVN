@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes' ?>
+<!--<?xml-stylesheet type='text/css' href='a.css' ?>-->
+<users>
+    <user>
+        <name id='zhangsanId'>zhangsan</name>
+        <age>18</age>
+        <gender>male</gender>
+    </user>
+    <user>
+        <name number="GGG">
+            <age>18</age>
+        </name>
+        <age>17</age>
+        <gender>female</gender>
+
+        <code>
+            if(a &lt; b &amp;&amp; a &gt; c) {}
+
+            <![CDATA[
+                if(a &lt; b &amp;&amp; a &gt; c) {}
+            ]]]>
+        </code>
+    </user>
+</users>
