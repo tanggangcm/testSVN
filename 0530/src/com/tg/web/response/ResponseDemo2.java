@@ -1,6 +1,7 @@
 package com.tg.web.response;
 
 import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +21,10 @@ public class ResponseDemo2 extends HttpServlet {
         // resp.setCharacterEncoding("UTF-8");
         // resp.setHeader("content-type", "text/html;charset=UTF-8");
         resp.setContentType("text/html;charset=UTF-8");
-        resp.getWriter().write("你好，，，");
+        // resp.getWriter().write("你好，，，");resp.getWriter().write("你好，，，");
+
+        ServletOutputStream outputStream = resp.getOutputStream();
+        outputStream.write("你好啊".getBytes("UTF-8"));
     }
 
     @Override
